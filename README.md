@@ -21,16 +21,21 @@ Source:  https://twitter.com/takipid/status/350953999622619138
 * Go to http://www.takipi.com/ and create an account
 
 * Follow thier getting started guide at http://www.takipi.com/starting.html or install Takipi service manually in your shell
-    wget https://s3.amazonaws.com/app-takipi-com/deploy/linux/takipi-installer;
-    sudo bash takipi-installer;
-    source /opt/takipi/etc/auto-agent;
+```
+wget https://s3.amazonaws.com/app-takipi-com/deploy/linux/takipi-installer;
+sudo bash takipi-installer;
+source /opt/takipi/etc/auto-agent;
+```
 
 * In https://app.takipi.com/ settings, make sure you have the server key added and the following in the "Top level packages":
+    
     org;com;clojure;clojuretakipinotes
 
 * Compile this project with lein and run it as a jar 
-    lein uberjar;
-    java -jar target/clojuretakipinotes-0.1.1-SNAPSHOT-standalone.jar
+````    
+lein uberjar;
+java -jar target/clojuretakipinotes-0.1.1-SNAPSHOT-standalone.jar
+````
 
 Note that I removed the spaces in the project name because Takipi seems to have a hard time with them.
 
